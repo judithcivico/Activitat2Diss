@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Película/Serie/Episodio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(32, 32, 32);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(32, 32, 32);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2c2c2c;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .detalle-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(48, 48, 48);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .detalle-container img {
+            height: 300px;
+            width: auto;
+        }
+
+        .trailer-iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        .contenido-relacionado {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .item-relacionado {
+            width: 200px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .item-relacionado:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JUFLIX</h1>
+    </header>
+
+    <nav>
+        <img src="logo.png" alt="Logo de la plataforma">
+        <ul>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Películas</a></li>
+            <li><a href="#">Favoritos</a></li>
+            <li>
+                <form action="/buscar" method="get">
+                    <input type="text" name="buscar" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </li>
+            <li class="logout" onclick="cerrarSesion()">Cerrar sesión</li>
+        </ul>
+    </nav>
+
+    <div class="detalle-container">
+        <h2>SpiderMan: No Way Home</h2>
+        <p>Calificación: 4.5</p>
+        <p>Año: 2020</p>
+        <p>Sinopsis completa...</p>
+        <p>Actores: Tom Holland, Zendaya, Jacob Batalon, ...</p>
+
+        <img src="assets/peli1.png" alt="SpiderMan: No Way Home">
+
+        <iframe class="trailer-iframe" src="https://www.youtube.com/watch?v=SkmRT3M4Vx4" frameborder="0" allowfullscreen></iframe>
+
+        <h3>Contenido Relacionado</h3>
+        <div class="contenido-relacionado">
+            <div class="item-relacionado">
+                <img src="assets/peli2.png" alt="Little Women">
+                <div class="item-info">
+                    <h4>Little Women</h4>
+                </div>
+            </div>
+
+            <div class="item-relacionado">
+                <img src="assets/peli3.png" alt="Alice in Borderland">
+                <div class="item-info">
+                    <h4>Alice in Borderland</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
